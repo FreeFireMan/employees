@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name" : "Иван Петрович",
+    "isArchive": false,
+    "phone" : "+3 8097 506-3296",
+    "birthday": "21.02.1987"
+  },
+  {
+    "id": 2,
+    "name" : "Илья Емельянов",
+    "isArchive": false,
+    "phone" : "",
+    "birthday": ""
+  },
+  {
+    "id": 3,
+    "name" : "Юрий Седорук",
+    "isArchive": false,
+    "phone" : "",
+    "birthday": ""
+  },
+  {
+    "id": 4,
+    "name" : "Дмитрий Козятинов",
+    "isArchive": false,
+    "phone" : "",
+    "birthday": ""
+  },
+  {
+    "id": 5,
+    "name" : "Ирина Николаевна",
+    "isArchive": false,
+    "phone" : "",
+    "birthday": ""
+  },
+  {
+    "id": 6,
+    "name" : "Катя Петрова",
+    "isArchive": false,
+    "phone" : "",
+    "birthday": ""
+  }
+]
