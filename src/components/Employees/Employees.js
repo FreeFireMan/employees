@@ -8,16 +8,30 @@ import {
     changeIsArchive,
     fetchProductsPending,
     fetchProductsSuccess,
-    fetchProductsError
+    fetchProductsError,
+    deletePerson
 } from "../../actions/employees-action";
 
 class Employees extends Component {
+    constructor(props){
+        super(props)
+        this.shouldFetchProducts = this.shouldFetchProducts.bind(this)
+    }
+    shouldFetchProducts() {
+        console.log("test", this.props)
+        const {pending} = this.props;
+
+        return pending ? true : false;
+    }
     componentDidMount() {
-        this.props.fetchProductsPending();
-        this.props.fetchProductsSuccess(data);
+        if(!this.shouldFetchProducts()) {
+            this.props.fetchProductsSuccess(data);
+            this.props.fetchProductsPending();
+        }
+        this.props.deletePerson();
     }
     onChangeIsArchive=(e)=>{
-       this.props.changeIsArchive(e.target.value);
+      // this.props.changeIsArchive(e.target.value);
         console.log("onChangeIsArchive",e.target.value)
     }
 
@@ -49,7 +63,7 @@ class Employees extends Component {
                                 }</td>
                                 <td>
                                     <label className="containerForTree">
-                                        <input type="checkbox" value={item.id} onChange={this.onChangeIsArchive} checked={item.isArchive}/>
+                                        <input type="checkbox" value={item.id} disabled checked={item.isArchive}/>
                                         <span className="checkmark"></span>
                                     </label>
                                 </td>
@@ -65,15 +79,16 @@ class Employees extends Component {
 }
 
 
-const mapStateToPrors = ({employees, role}) => {
-    return {employees, role};
+const mapStateToPrors = ({employees, role,pending}) => {
+    return {employees, role,pending};
 };
 const mapDispatchToProps = (dispatch) => {
     return {
         changeIsArchive: (id) => dispatch(changeIsArchive(id)),
         fetchProductsPending: () => dispatch(fetchProductsPending()),
         fetchProductsSuccess: (emploees) => dispatch(fetchProductsSuccess(emploees)),
-        fetchProductsError: () => dispatch(fetchProductsError())
+        fetchProductsError: () => dispatch(fetchProductsError()),
+        deletePerson: () => dispatch(deletePerson())
     };
 };
 export default connect(mapStateToPrors, mapDispatchToProps)(Employees);

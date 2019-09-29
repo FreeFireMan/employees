@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb5b0deb-b3e2-4a98-830f-a628f38ae302" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/action-types/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/action-types/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/employees-action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/employees-action.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Employees/Employees.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Employees/Employees.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,8 +80,16 @@
       <updated>1569485227006</updated>
       <workItem from="1569485229207" duration="14965000" />
       <workItem from="1569684333601" duration="13333000" />
-      <workItem from="1569768353037" duration="3508000" />
+      <workItem from="1569768353037" duration="12880000" />
     </task>
+    <task id="LOCAL-00001" summary="двигаемся вперед">
+      <created>1569771881405</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569771881405</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,5 +107,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="двигаемся вперед" />
+    <option name="LAST_COMMIT_MESSAGE" value="двигаемся вперед" />
   </component>
 </project>

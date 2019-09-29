@@ -5,7 +5,10 @@ import {
     FETCH_EMPLOYEES_SUCCESS,
     CHANGE_EMPLOYEES_ISARCHIVE,
     FETCH_PERSON_SUCCESS,
-    CHANGE_PERSON_ROLE
+    CHANGE_PERSON_ROLE,
+    SAVE_PERSON,
+    DELETE_PERSON,
+    CHANGE_PERSON_ISARCHIVE
 } from '../action-types'
 export const toggleItemToCart = (id) =>{
     return{
@@ -19,15 +22,35 @@ export const fetchPersonSucces = (id) =>{
         payload: id
     }
 };
+
 export const changeIsArchive = (id) =>{
     return{
-        type: CHANGE_EMPLOYEES_ISARCHIVE,
+        type: DELETE_PERSON,
         payload: id
     }
-};export const changeIsRole = (role) =>{
+};
+export const deletePerson = () =>{
+    return{
+        type: DELETE_PERSON
+
+    }
+};
+export const changePersonIsArchive = (id) =>{
+    return{
+        type: CHANGE_PERSON_ISARCHIVE,
+        payload: id
+    }
+};
+export const changeIsRole = (role) =>{
     return{
         type: CHANGE_PERSON_ROLE,
         payload: role
+    }
+};
+export const savePerson = (pers) =>{
+    return{
+        type: SAVE_PERSON,
+        payload: pers
     }
 };
 export function fetchProductsPending() {
