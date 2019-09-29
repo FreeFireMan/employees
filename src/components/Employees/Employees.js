@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {NavLink} from "react-router-dom";
 import data from '../../Data'
 
 import './Employees.css'
@@ -41,7 +42,7 @@ class Employees extends Component {
                         (
                             <tr key={item.id}>
                                 <th scope="row">{item.id}</th>
-                                <td>{item.name}</td>
+                                <td><NavLink to={'/' + item.id}>{item.name}</NavLink></td>
                                 <td>{item.phone}</td>
                                 <td>{
                                     role.filter(i => (i.hasOwnProperty(item.role)))[0][item.role]

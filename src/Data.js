@@ -5,7 +5,7 @@ const my_data =[
         "isArchive": false,
         "role" : "driver",
         "phone" : "+3 8097 506-3296",
-        "birthday": "21.02.1987"
+        "birthday": "1987-02-21"
     },
     {
         "id": 2,

@@ -3,7 +3,9 @@ import {
     FETCH_EMPLOYEES_ERROR,
     FETCH_EMPLOYEES_PENDING,
     FETCH_EMPLOYEES_SUCCESS,
-    CHANGE_EMPLOYEES_ISARCHIVE
+    CHANGE_EMPLOYEES_ISARCHIVE,
+    FETCH_PERSON_SUCCESS,
+    CHANGE_PERSON_ROLE
 } from '../action-types'
 export const toggleItemToCart = (id) =>{
     return{
@@ -11,10 +13,21 @@ export const toggleItemToCart = (id) =>{
         payload: id
     }
 };
+export const fetchPersonSucces = (id) =>{
+    return{
+        type: FETCH_PERSON_SUCCESS,
+        payload: id
+    }
+};
 export const changeIsArchive = (id) =>{
     return{
         type: CHANGE_EMPLOYEES_ISARCHIVE,
         payload: id
+    }
+};export const changeIsRole = (role) =>{
+    return{
+        type: CHANGE_PERSON_ROLE,
+        payload: role
     }
 };
 export function fetchProductsPending() {
