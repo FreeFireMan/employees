@@ -40,6 +40,7 @@ class Employees extends Component {
 
 
         return (
+            <div>
             <table className="table">
                 <thead>
                 <tr>
@@ -63,7 +64,7 @@ class Employees extends Component {
                                 }</td>
                                 <td>
                                     <label className="containerForTree">
-                                        <input type="checkbox" value={item.id} disabled checked={item.isArchive}/>
+                                        <input type="checkbox" disabled checked={item.isArchive}/>
                                         <span className="checkmark"></span>
                                     </label>
                                 </td>
@@ -73,6 +74,13 @@ class Employees extends Component {
                 }
                 </tbody>
             </table>
+                <div className="col-sm-9">
+                    <NavLink to={'/create/' + employees.length}>
+                    <button type="button" className="btn btn-primary" >Добавить Сотрудника
+                    </button>
+                    </NavLink>
+                </div>
+            </div>
         );
     }
 

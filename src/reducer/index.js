@@ -1,11 +1,15 @@
 import {
-    CHANGE_EMPLOYEES_ISARCHIVE, CHANGE_PERSON_ISARCHIVE, CHANGE_PERSON_ROLE, DELETE_PERSON,
+    CHANGE_EMPLOYEES_ISARCHIVE,
+    CHANGE_PERSON_ROLE,
+    CHANGE_PERSON_TEXT_INPUT,
+    DELETE_PERSON,
     FETCH_EMPLOYEES_ERROR,
     FETCH_EMPLOYEES_PENDING,
     FETCH_EMPLOYEES_SUCCESS,
-    FETCH_PERSON_SUCCESS,
+    FETCH_PERSON_SUCCESS, SAVE_NEW_PERSON,
     SAVE_PERSON
 } from '../action-types';
+import {placeholder} from "@babel/types";
 
 const initialState = {
     employees: [],
@@ -62,14 +66,18 @@ export default (state = initialState, action) => {
 
         case SAVE_PERSON:
             employeesCopy = [...employees];
-            indexOfCurrentItem = employeesCopy.findIndex((el) => el.id == payload.id);
-            console.log("SAVE_PERSON", payload)
-            employeesCopy[indexOfCurrentItem] = payload;
+            indexOfCurrentItem = employeesCopy.findIndex((el) => el.id == payload);
+            console.log("SAVE_PERSON", person)
+            employeesCopy[indexOfCurrentItem] = person;
             return {...state, employees: employeesCopy};
-        case CHANGE_PERSON_ISARCHIVE:
-            personCopy = {...person};
-            personCopy.isArchive = !personCopy.isArchive;
-            return {...state, person: personCopy};
+
+        case CHANGE_PERSON_TEXT_INPUT:
+            return {...state, person: {...person, [payload[0]]: payload[1]}};
+        case SAVE_NEW_PERSON:
+                console.log("SAVE_NEW_PERSON",payload)
+            employeesCopy = [...employees];
+            employeesCopy.push(payload)
+            return {...state, employees : employeesCopy};
 
         default:
             return state;

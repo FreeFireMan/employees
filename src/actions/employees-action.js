@@ -3,12 +3,13 @@ import {
     FETCH_EMPLOYEES_ERROR,
     FETCH_EMPLOYEES_PENDING,
     FETCH_EMPLOYEES_SUCCESS,
-    CHANGE_EMPLOYEES_ISARCHIVE,
     FETCH_PERSON_SUCCESS,
     CHANGE_PERSON_ROLE,
     SAVE_PERSON,
     DELETE_PERSON,
-    CHANGE_PERSON_ISARCHIVE
+    CHANGE_PERSON_ISARCHIVE,
+    CHANGE_PERSON_TEXT_INPUT,
+    SAVE_NEW_PERSON
 } from '../action-types'
 export const toggleItemToCart = (id) =>{
     return{
@@ -29,6 +30,12 @@ export const changeIsArchive = (id) =>{
         payload: id
     }
 };
+export const saveNewPerson = (pers) =>{
+    return{
+        type: SAVE_NEW_PERSON,
+        payload: pers
+    }
+};
 export const deletePerson = () =>{
     return{
         type: DELETE_PERSON
@@ -41,16 +48,22 @@ export const changePersonIsArchive = (id) =>{
         payload: id
     }
 };
+export const changePersonTextInput = (obj) =>{
+    return{
+        type: CHANGE_PERSON_TEXT_INPUT,
+        payload: obj
+    }
+};
 export const changeIsRole = (role) =>{
     return{
         type: CHANGE_PERSON_ROLE,
         payload: role
     }
 };
-export const savePerson = (pers) =>{
+export const savePerson = (id) =>{
     return{
         type: SAVE_PERSON,
-        payload: pers
+        payload: id
     }
 };
 export function fetchProductsPending() {
